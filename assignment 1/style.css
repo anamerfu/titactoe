@@ -1,0 +1,16 @@
+#myCanvas {
+position:absolute;
+}
+
+.square {
+    width:300px;
+    height:300px;
+    float:left;
+    z-index:99;
+
+}
+
+#square4, square7{
+    clear:left;
+}
+

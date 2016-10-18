@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+<title>Tic Tac Toe</title>
+ <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+   <canvas id="myCanvas" width="900" height="900" style="border:1px solid #000000;">
+       Your browser does not support html canvas.
+</canvas>
+       <canvas id="square1" class="square" style="border:1px solid #000000;">
+       Your browser does not support html canvas.
+</canvas>
+       <canvas id="square2" class="square" style="border:1px solid #000000;">
+       Your browser does not support html canvas.
+</canvas>
+       <canvas id="square3" class="square" style="border:1px solid #000000;">
+       Your browser does not support html canvas.
+</canvas>
+       <canvas id="square4" class="square" style="border:1px solid #000000;">
+       Your browser does not support html canvas.
+</canvas>
+       <canvas id="square5" class="square" style="border:1px solid #000000;">
+       Your browser does not support html canvas.
+</canvas>
+       <canvas id="square6" class="square" style="border:1px solid #000000;">
+       Your browser does not support html canvas.
+</canvas>
+       <canvas id="square7" class="square" style="border:1px solid #000000;">
+       Your browser does not support html canvas.
+</canvas>
+       <canvas id="square8" class="square" style="border:1px solid #000000;">
+       Your browser does not support html canvas.
+</canvas>
+       <canvas id="square9" class="square" style="border:1px solid #000000;">
+       Your browser does not support html canvas.
+</canvas>
+    
+    
+    <script>
+        window.onload = function() {
+            
+            var theCanvas = document.getElementById("myCanvas");
+            var square1 = document.getElementById("square1");
+            var square2 = document.getElementById("square2");
+            var square3 = document.getElementById("square3");
+            var square4 = document.getElementById("square4");
+            var square5 = document.getElementById("square5");
+            var square6 = document.getElementById("square6");
+            var square7 = document.getElementById("square7");
+            var square8 = document.getElementById("square8");
+            var square9 = document.getElementById("square9");
+            
+            var ctx = theCanvas.getContext("2d");
+            var ctx1 = square1.getContext("2d");
+            var ctx2 = square2.getContext("2d");
+            var ctx3 = square3.getContext("2d");
+            var ctx4 = square4.getContext("2d");
+            var ctx5 = square5.getContext("2d");
+            var ctx6 = square6.getContext("2d");
+            var ctx7 = square7.getContext("2d");
+            var ctx8 = square8.getContext("2d");
+            var ctx9 = square9.getContext("2d");
+            
+            var turn  = "x";
+            var positionX;
+            var positionY;
+            
+            if(theCanvas && theCanvas.getContext ) {
+
+                if (ctx) {
+                    ctx.strokeStyle="#000";
+                    ctx.lineWidth = 5;
+                    ctx.lineCap = "round";
+                    
+                    ctx.beginPath();
+                    ctx.moveTo(300, 0);
+                    ctx.lineTo(300,900);
+                    ctx.stroke();
+                    
+                    ctx.beginPath();
+                    ctx.moveTo(600, 0);
+                    ctx.lineTo(600,900);
+                    ctx.stroke();
+                    
+                    ctx.beginPath();
+                    ctx.moveTo(0, 300);
+                    ctx.lineTo(900,300);
+                    ctx.stroke();
+                    
+                    ctx.beginPath();
+                    ctx.moveTo(0, 600);
+                    ctx.lineTo(900,600);
+                    ctx.stroke();
+                
+                    theCanvas.addEventListener("click", userClicked);
+                    
+                  };  
+            }
+            
+
+                  /*  function userClicked(){
+                        positionX = Math.floor(event.clientX/300)*300;
+                        positionY = Math.floor(event.clientY/300)*300;
+                        console.log(positionX, positionY);
+                           
+                        if(turn=="x"){
+                            turn ="y";
+                        } else {
+                            turn = "x";    
+                        }
+                        makeSymbol(turn, positionX , positionY);
+                        console.log(turn);
+                        
+                    function makeSymbol(symbol, x, y){
+                        
+                        
+                        if(symbol=="x"){
+                            ctx.strokeStyle="#000";
+                            ctx.lineWidth = 5;
+                            ctx.lineCap = "round";
+
+                            ctx.beginPath();
+                            ctx.moveTo(positionX, positionY);
+                            ctx.lineTo(positionX+300,positionY+300);
+                            ctx.stroke();
+
+                            ctx.beginPath();
+                            ctx.moveTo(positionX+300, positionY);
+                            ctx.lineTo(positionX, positionY+300);
+                            ctx.stroke();
+                        } else {
+                            ctx.strokeStyle="#000";
+                            ctx.lineWidth = 5;
+                            ctx.lineCap = "round";
+                            ctx.beginPath();
+                            ctx.arc(positionX+150,positionY+150,140,0,2*Math.PI);
+                            ctx.stroke();
+                            
+                        }
+                        
+                    }
+                        
+                        
+                    }; */
+                    
+                    
+       
+                
+                        
+   
+            }
+        }
+        
+    </script>
+</body>
